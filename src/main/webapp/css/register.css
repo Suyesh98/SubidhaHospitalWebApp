@@ -1,0 +1,322 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f7fc;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+}
+
+/*  Container & Section Styles  */
+.register-container {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.register-form-section {
+    flex-basis: 50%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 40px; 
+    background-color: #ffffff;
+    position: relative;
+    overflow-y: auto; 
+}
+
+.register-image-section {
+    flex-basis: 50%;
+    background-image: url('../images/signup doctor bg.jpg'); 
+    background-size: cover;
+    background-position: center 60%; 
+    background-repeat: no-repeat;
+}
+
+/* --- Form Content & Logo  --- */
+.form-content {
+    width: 100%;
+    max-width: 550px; 
+    text-align: center;
+    margin-top: auto; 
+    margin-bottom: auto; 
+    padding: 20px 0; 
+}
+
+.register-logo {
+    display: block;
+    max-width: 90px; /*  smaller logo */
+    height: auto;
+    margin: 0 auto 20px auto;
+}
+
+.register-form-section h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #2c3e50;
+}
+
+.register-form-section .subtitle {
+    font-size: 0.95rem;
+    font-weight: 400;
+    margin-bottom: 30px; 
+    color: #555;
+}
+
+/* --- Form Grid Layout --- */
+.register-form .form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+    gap: 15px 20px;
+    margin-bottom: 20px;
+}
+
+.register-form .input-group {
+    text-align: left;
+    margin-bottom: 0; 
+}
+
+.register-form .input-group.full-width {
+    grid-column: 1 / -1; 
+}
+
+/* --- Form Element Styling  --- */
+.register-form label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 6px; 
+    color: #444;
+}
+
+.register-form input[type="text"],
+.register-form input[type="password"],
+.register-form input[type="date"],
+.register-form input[type="tel"], 
+.register-form select {           
+    width: 100%;
+    padding: 11px 14px; 
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    background-color: #ffffff;
+    color: #495057;
+    font-size: 0.9rem; 
+    font-family: inherit; 
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    -webkit-appearance: none; 
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* Add custom arrow for select */
+.register-form select {
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23495057" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 18px;
+    padding-right: 35px; 
+}
+
+/* Style date input placeholder text  */
+.register-form input[type="date"]:invalid,
+.register-form input[type="date"]::-webkit-datetime-edit {
+     color: #aaa;
+}
+
+
+.register-form input::placeholder,
+.register-form select option[value=""] { /* Style placeholder option */
+    color: #aaa;
+}
+.register-form select {
+    color: #495057; /* Default text color */
+}
+.register-form select:required:invalid { /* Style when placeholder is selected */
+     color: #aaa;
+}
+
+
+/* Input focus state ( */
+.register-form input:focus,
+.register-form select:focus {
+    border-color: #5c4b99;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(92, 75, 153, 0.2);
+}
+
+/* Button Styling  */
+.register-button {
+    width: 100%;
+    padding: 12px 20px;
+    margin-top: 15px; 
+    background-color: #5c4b99;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.register-button:hover {
+    background-color: #4a3a80;
+}
+
+.register-button:active {
+    transform: scale(0.98);
+}
+
+/* --- Links below button --- */
+.register-links {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.register-links p {
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.register-links a {
+    color: #5c4b99;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.register-links a:hover {
+    color: #4a3a80;
+    text-decoration: underline;
+}
+
+/* --- Footer Text ( --- */
+.footer-text {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #888;
+}
+
+
+/* --- Message Styling  --- */
+.message {
+    padding: 12px 15px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-align: left;
+    border: 1px solid transparent;
+}
+
+.success-message {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.error-message {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 1024px) {
+    .register-form-section {
+        flex-basis: 60%; 
+    }
+    .register-image-section {
+        flex-basis: 40%;
+    }
+    .form-content {
+        max-width: 500px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .register-container {
+        flex-direction: column;
+    }
+
+    .register-form-section,
+    .register-image-section {
+        flex-basis: auto;
+    }
+
+    .register-image-section {
+         min-height: 25vh; 
+         order: -1; 
+         background-position: center 40%; 
+    }
+
+    .register-form-section {
+        min-height: auto; 
+        padding: 30px 30px; 
+        justify-content: flex-start;
+        overflow-y: visible; 
+    }
+     .form-content {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        padding: 0;
+    }
+
+    .footer-text {
+        position: static; 
+        margin-top: 30px;
+        padding-bottom: 20px;
+    }
+
+    /* Stack grid items on smaller screens */
+    .register-form .form-grid {
+        grid-template-columns: 1fr; /* Single column */
+        gap: 15px 0;
+    }
+     .register-form .input-group.full-width {
+        grid-column: 1 / -1; /* Still applies correctly */
+    }
+}
+
+@media (max-width: 500px) {
+    .register-form-section {
+        padding: 20px 20px;
+    }
+
+    .register-form-section h2 {
+        font-size: 1.6rem;
+    }
+    .register-logo {
+        max-width: 70px;
+        margin-bottom: 15px;
+    }
+    .register-form-section .subtitle {
+        font-size: 0.9rem;
+        margin-bottom: 25px;
+    }
+     .register-button {
+        padding: 11px 15px;
+        font-size: 0.95rem;
+     }
+}

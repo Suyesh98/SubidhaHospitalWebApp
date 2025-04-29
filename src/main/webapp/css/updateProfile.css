@@ -1,0 +1,228 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* --- Variables --- */
+:root {
+    --primary-color: #5c4b99; /* Logo Purple */
+    --primary-dark: #4a3a80;  /* Darker Purple */
+    --light-purple-bg: #eaddff;
+    --white-color: #ffffff;
+    --dark-text: #2c3e50;
+    --medium-text: #555;
+    --light-text: #777;
+    --border-color: #ced4da; /* Consistent border color */
+    --card-bg: #ffffff;
+    --body-bg: #f8f9fa;
+    --success-bg: #d4edda;
+    --success-border: #c3e6cb;
+    --success-text: #155724;
+    --error-bg: #f8d7da;
+    --error-border: #f5c6cb;
+    --error-text: #721c24;
+    --navbar-height: 70px;
+    --footer-height: 60px;
+}
+
+/* --- Basic Reset & Body Styles --- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--body-bg);
+    color: var(--medium-text);
+    line-height: 1.6;
+    padding-top: var(--navbar-height); /* Account for fixed navbar */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+}
+a { text-decoration: none; color: var(--primary-color); transition: color 0.3s ease; }
+a:hover { color: var(--primary-dark); }
+img { max-width: 100%; height: auto; display: block; }
+
+/* --- Footer --- */
+.footer { background-color: var(--dark-text); color: #adb5bd; padding: 20px 0; text-align: center; height: var(--footer-height); margin-top: auto; /* Push footer to bottom */ }
+.footer-container { max-width: 1140px; margin: 0 auto; padding: 0 15px; }
+.footer p { margin: 0; font-size: 0.9rem; }
+
+
+/* == Update Profile Page Specific Styles  == */
+
+.update-profile-main {
+    flex-grow: 1;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    padding: 40px 20px; 
+}
+
+.update-profile-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-card {
+    background-color: var(--card-bg);
+    padding: 35px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    max-width: 600px; /* Limit width of the card */
+    width: 100%;
+    text-align: left; /* Align text left within card */
+}
+
+.card-title {
+    font-size: 1.9rem;
+    font-weight: 600;
+    color: var(--dark-text);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.card-subtitle {
+    font-size: 1rem;
+    color: var(--medium-text);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Form Element Styling */
+.profile-form .input-group {
+    margin-bottom: 20px;
+}
+
+.profile-form label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #444;
+}
+
+.profile-form input[type="text"],
+.profile-form input[type="tel"] { 
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: var(--white-color);
+    color: #495057;
+    font-size: 0.95rem;
+    font-family: inherit;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.profile-form input::placeholder {
+    color: #aaa;
+}
+
+.profile-form input:focus {
+    border-color: var(--primary-color);
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(92, 75, 153, 0.2);
+}
+
+/*  Button Styling */
+.update-button {
+    display: block; 
+    width: 100%;
+    padding: 12px 20px;
+    margin-top: 15px; 
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.update-button:hover {
+    background-color: var(--primary-dark);
+}
+
+.update-button:active {
+    transform: scale(0.98);
+}
+
+/* Message Styling */
+.message {
+    padding: 12px 15px;
+    border-radius: 6px;
+    margin-bottom: 25px; 
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-align: left;
+    border: 1px solid transparent;
+    display: flex; /* Align icon and text */
+    align-items: center;
+}
+.message i {
+    margin-right: 10px; /* Space after icon */
+    font-size: 1.1em; /* Slightly larger icon */
+}
+
+.success-message {
+    color: var(--success-text);
+    background-color: var(--success-bg);
+    border-color: var(--success-border);
+}
+
+.error-message {
+    color: var(--error-text);
+    background-color: var(--error-bg);
+    border-color: var(--error-border);
+}
+
+/* Links below form */
+.form-links {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.back-link {
+    color: var(--medium-text);
+    font-size: 0.9rem;
+    display: inline-flex; /* Align icon and text */
+    align-items: center;
+}
+.back-link i {
+    margin-right: 5px;
+}
+
+.back-link:hover {
+    color: var(--dark-text);
+    text-decoration: underline;
+}
+
+
+/*  Responsive Design  */
+
+@media (max-width: 768px) {
+    body { padding-top: 60px; }
+
+   
+    .update-profile-main {
+        padding: 20px 15px; 
+        align-items: flex-start; 
+    }
+    .profile-card {
+        padding: 25px 20px;
+        margin-top: 10px; 
+    }
+    .card-title { font-size: 1.6rem; }
+    .card-subtitle { font-size: 0.95rem; margin-bottom: 25px;}
+}
+
+@media (max-width: 576px) {
+     .profile-card {
+        padding: 20px 15px;
+    }
+    .card-title { font-size: 1.4rem; }
+    .card-subtitle { font-size: 0.9rem; }
+    .update-button { font-size: 0.95rem; padding: 11px 15px;}
+}

@@ -1,0 +1,381 @@
+
+
+/* --- Variables (Ensure these are defined globally or define them here) --- */
+:root {
+    --primary-color: #5c4b99;
+    --primary-dark: #4a3a80;
+    --white-color: #ffffff;
+    --dark-text: #2c3e50;
+    --light-purple-bg: #eaddff; 
+    --navbar-height: 70px; 
+    --body-bg: #f8f9fa;   
+}
+
+ body {
+    padding-top: var(--navbar-height);
+    font-family: 'Poppins', sans-serif; 
+    background-color: var(--body-bg);
+} 
+
+/* --- Navbar Container --- */
+.navbar {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 0 20px; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; 
+    height: var(--navbar-height);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex; 
+    align-items: center; 
+}
+
+.navbar-container {
+    max-width: 1200px; /* Limit content width */
+    width: 100%;
+    margin: 0 auto; /* Center the container */
+    display: flex;
+    justify-content: space-between; /* Space out logo, nav, actions */
+    align-items: center;
+    height: 100%;
+    position: relative; /* Needed for absolute positioning of mobile menu */
+}
+
+/* --- Logo --- */
+.navbar-logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* Remove underline from logo link */
+    flex-shrink: 0; /* Prevent logo from shrinking */
+}
+
+.navbar-logo {
+    height: 45px; /* Adjust size as needed */
+    width: 45px;
+    object-fit: contain; /* Scale image correctly */
+    background-color: var(--white-color);
+    border-radius: 50%; /* Circular logo background */
+    padding: 4px; /* Small padding around logo */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+    margin-right: 10px; /* Space between logo and text/nav */
+    display: block;
+}
+
+/* Optional: Brand Text next to logo */
+.navbar-brand-text {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--white-color);
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+
+/* --- Navigation Links --- */
+.navbar-nav {
+    display: flex; /* Display nav horizontally */
+    align-items: center; /* Align items vertically */
+}
+
+.navbar-nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-nav li {
+    margin-left: 25px; /* Spacing between nav items */
+}
+
+.navbar-nav a {
+    color: var(--white-color);
+    font-weight: 500;
+    font-size: 0.95rem;
+    text-decoration: none;
+    padding: 10px 5px; /* Clickable area */
+    position: relative; /* For the underline effect */
+    transition: color 0.3s ease;
+    white-space: nowrap; /* Prevent wrapping */
+}
+
+/* Underline Effect */
+.navbar-nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 5px; /* Position underline */
+    left: 0;
+    width: 0; /* Hidden by default */
+    height: 2px;
+    background-color: var(--white-color);
+    transition: width 0.3s ease;
+}
+
+.navbar-nav a:hover,
+.navbar-nav a.active { /* Style for hover and active link */
+    color: #f0f0f0; /* Slightly lighter/brighter */
+}
+
+.navbar-nav a:hover::after,
+.navbar-nav a.active::after {
+    width: 100%; /* Show underline on hover/active */
+}
+
+
+/* --- User Actions (Right Side) --- */
+.navbar-actions {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0; /* Prevent actions from shrinking */
+}
+
+/* Profile Link */
+.navbar-profile-link {
+    color: var(--white-color);
+    margin-right: 20px; /* Space before logout button */
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navbar-profile-link i {
+    font-size: 1.4rem; /* Icon size */
+    margin-right: 8px; /* Space between icon and text */
+}
+
+.navbar-profile-link:hover,
+.navbar-profile-link.active {
+    color: #f0f0f0; /* Highlight on hover/active */
+}
+.navbar-profile-link.active {
+    font-weight: 600; /* Make active profile link bolder */
+}
+
+
+/* Logout Button */
+.logout-button {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+    color: var(--primary-color);
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    white-space: nowrap;
+}
+.logout-button .logout-icon {
+    margin-right: 6px;
+    font-size: 1em;
+}
+.logout-button .logout-text {
+    display: inline; /* Show text by default */
+}
+
+
+.logout-button:hover {
+    background-color: var(--white-color); /* Solid white on hover */
+    color: var(--primary-dark);
+}
+
+/* Alternative Buttons for Logged Out State (Optional) */
+.navbar-actions .button {
+    padding: 7px 14px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    margin-left: 10px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    white-space: nowrap;
+}
+.navbar-actions .button-primary {
+    background-color: var(--white-color);
+    color: var(--primary-color);
+    border: 1px solid var(--white-color);
+}
+.navbar-actions .button-primary:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: var(--primary-dark);
+}
+.navbar-actions .button-secondary {
+    background-color: transparent;
+    color: var(--white-color);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+}
+.navbar-actions .button-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: var(--white-color);
+}
+
+
+/* --- Mobile Menu --- */
+.menu-toggle-checkbox {
+    display: none; /* Hide the actual checkbox */
+}
+
+.mobile-menu-toggle {
+    display: none; /* Hidden by default on larger screens */
+    background: none;
+    border: none;
+    color: var(--white-color);
+    font-size: 1.6rem; /* Hamburger icon size */
+    cursor: pointer;
+    padding: 5px;
+    z-index: 1001; /* Above the nav background */
+}
+
+.mobile-menu-toggle .menu-icon-close {
+    display: none; /* Hide close icon initially */
+}
+
+/* Show/Hide icons based on checkbox state */
+.menu-toggle-checkbox:checked ~ .mobile-menu-toggle .menu-icon-open {
+    display: none;
+}
+.menu-toggle-checkbox:checked ~ .mobile-menu-toggle .menu-icon-close {
+    display: block; 
+}
+
+/* --- Responsive Styles --- */
+
+/* Medium screens and below */
+@media (max-width: 992px) {
+    .navbar-nav li {
+        margin-left: 15px; 
+    }
+    .navbar-nav a {
+        font-size: 0.9rem; 
+    }
+    .navbar-profile-link {
+        margin-right: 15px;
+    }
+    .logout-button {
+        padding: 7px 12px;
+    }
+}
+
+/* Small screens (Mobile) */
+@media (max-width: 768px) {
+    :root {
+        --navbar-height: 60px; 
+    }
+    .navbar {
+        padding: 0 15px; 
+    }
+    .navbar-logo {
+        height: 40px;
+        width: 40px;
+        padding: 3px;
+    }
+
+    /* Show hamburger toggle */
+    .mobile-menu-toggle {
+        display: block;
+    }
+
+    /* Hide Nav and Actions by default */
+    .navbar-nav,
+    .navbar-actions {
+        display: none; 
+        position: absolute;
+        top: var(--navbar-height); 
+        left: 0;
+        width: 100%;
+        background-color: var(--primary-dark); 
+        flex-direction: column; 
+        align-items: center; 
+        padding: 15px 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* Show Nav and Actions when checkbox is checked */
+    .menu-toggle-checkbox:checked ~ .navbar-nav,
+    .menu-toggle-checkbox:checked ~ .navbar-actions {
+        display: flex; /* Show */
+    }
+
+    /* Style mobile menu items */
+    .navbar-nav ul {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+    .navbar-nav li {
+        margin: 10px 0;
+        margin-left: 0; 
+        width: 100%;
+    }
+    .navbar-nav a {
+        padding: 12px 20px; 
+        display: block;
+        width: 100%;
+    }
+    .navbar-nav a::after {
+        display: none; 
+    }
+    .navbar-nav a.active {
+       background-color: rgba(255, 255, 255, 0.1); 
+       font-weight: 600;
+    }
+
+
+    /* Style mobile actions */
+    .navbar-actions {
+        padding-bottom: 20px; 
+        border-top: none; 
+    }
+    .navbar-profile-link {
+        margin: 10px 0; 
+        margin-right: 0;
+        padding: 10px 20px;
+    }
+    .navbar-actions form {
+        margin-top: 10px;
+    }
+    .logout-button {
+        padding: 10px 25px; 
+    }
+    .logout-button .logout-icon {
+        display: none; 
+    }
+
+   
+     .navbar-actions .button {
+        width: 80%;
+        text-align: center;
+        margin: 8px 0;
+        padding: 10px 15px;
+    }
+}
+
+/* Very small screens */
+@media (max-width: 480px) {
+     
+    .logout-button .logout-text {
+        display: none;
+    }
+    .logout-button .logout-icon {
+        margin-right: 0;
+        font-size: 1.2em;
+    }
+    .logout-button {
+       padding: 8px 10px;
+    }
+    .navbar-profile-link span {
+       
+        display: none;
+    }
+    .navbar-profile-link i {
+       margin-right: 0;
+    }
+}

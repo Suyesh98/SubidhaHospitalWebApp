@@ -1,0 +1,267 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f7fc; 
+}
+
+body {
+    line-height: 1.6;
+    color: #333; 
+}
+
+.login-container {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Left Side - Form */
+.login-form-section {
+    flex-basis: 45%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 50px;
+    background-color: #ffffff; 
+    position: relative; 
+}
+
+.form-content {
+    width: 100%;
+    max-width: 380px; 
+    text-align: center; 
+}
+
+/* Logo Styling */
+.login-logo {
+    display: block;
+    max-width: 100px; 
+    height: auto;
+    margin: 0 auto 25px auto; 
+}
+
+.login-form-section h2 {
+    font-size: 1.8rem; 
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #2c3e50; 
+}
+
+.login-form-section .subtitle {
+    font-size: 0.95rem;
+    font-weight: 400;
+    margin-bottom: 35px;
+    color: #555; 
+}
+
+/* Form Styling */
+.login-form .input-group {
+    margin-bottom: 20px;
+    text-align: left; 
+}
+
+.login-form label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #444;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ced4da; 
+    border-radius: 6px;
+    background-color: #ffffff;
+    color: #495057; 
+    font-size: 0.95rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.login-form input[type="text"]::placeholder,
+.login-form input[type="password"]::placeholder {
+    color: #aaa; 
+}
+
+/* Input focus state  */
+.login-form input[type="text"]:focus,
+.login-form input[type="password"]:focus {
+    border-color: #5c4b99; 
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(92, 75, 153, 0.2); 
+}
+
+/* Button Styling */
+.login-button {
+    width: 100%;
+    padding: 12px 20px;
+    margin-top: 10px; 
+    background-color: #5c4b99;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.login-button:hover {
+    background-color: #4a3a80; 
+}
+
+.login-button:active {
+    transform: scale(0.98);
+}
+
+
+/* Links below button */
+.login-links {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.login-links a {
+    color: #5c4b99; 
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin: 0 10px; 
+    transition: color 0.3s ease;
+    display: inline-block; 
+    margin-bottom: 10px; 
+}
+
+.login-links a {
+    display: block;
+    margin: 10px 0; /* Vertical spacing */
+}
+
+
+.login-links a:hover {
+    color: #4a3a80; /* Darker purple on hover */
+    text-decoration: underline;
+}
+
+/* Footer Text */
+.footer-text {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #888;
+}
+
+
+/* Right Side - Image */
+.login-image-section {
+    flex-basis: 55%; 
+    background-image: url('../images/login doctor bg.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+     position: relative; 
+}
+.login-image-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.1); 
+} 
+
+
+/* Message Styling (Success/Error)  */
+.message {
+    padding: 12px 15px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-align: left;
+    border: 1px solid transparent;
+}
+
+.success-message {
+    color: #155724; 
+    background-color: #d4edda; 
+    border-color: #c3e6cb;
+}
+
+.error-message {
+    color: #721c24; 
+    background-color: #f8d7da; 
+    border-color: #f5c6cb;
+}
+
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .login-container {
+        flex-direction: column;
+    }
+
+    .login-form-section,
+    .login-image-section {
+        flex-basis: auto;
+    }
+
+    .login-image-section {
+         min-height: 35vh; 
+         order: -1; 
+    }
+
+    .login-form-section {
+        min-height: 65vh;
+        padding: 30px 40px;
+        justify-content: flex-start; 
+        padding-top: 50px; 
+    }
+     .footer-text {
+        position: static; 
+        margin-top: 30px; 
+    }
+}
+
+@media (max-width: 500px) {
+    .login-form-section {
+        padding: 25px 25px;
+        padding-top: 40px;
+    }
+
+    .login-form-section h2 {
+        font-size: 1.6rem;
+    }
+
+    .login-form-section .subtitle {
+        font-size: 0.9rem;
+        margin-bottom: 30px;
+    }
+
+     .form-content {
+        max-width: 100%;
+    }
+
+    .login-logo {
+        max-width: 80px;
+        margin-bottom: 20px;
+    }
+}
