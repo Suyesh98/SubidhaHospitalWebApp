@@ -78,18 +78,10 @@
 
                          <div class="input-group">
                             <label for="phoneNumber">Phone Number</label>
-                            <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="e.g., +1234567890"> 
+                            <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="e.g., 98********"> 
                         </div>
 
-                         <div class="input-group">
-                             <label for="visitDate">Preferred Visit Date </label>
-                             <input type="date" id="visitDate" name="visitDate">
-                         </div>
-
-                        <div class="input-group">
-                            <label for="department">Department </label>
-                            <input type="text" id="department" name="department" placeholder="e.g., Cardiology">
-                        </div>
+                         
                         
 						 <div class="input-group full-width password-container">
                       		  <label for="password">Password</label>

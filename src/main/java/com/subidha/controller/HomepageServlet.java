@@ -21,14 +21,14 @@ public class HomepageServlet extends HttpServlet {
         HttpSession session = request.getSession(false);  
 
         if (session != null && session.getAttribute("user") != null) {
-            // User is logged in
+         
             User user = (User) session.getAttribute("user");
-            request.setAttribute("user", user);  // Pass the user object to the JSP
+            request.setAttribute("user", user);  
             
             RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/pages/home.jsp");
             dispatcher.forward(request, response);
         } else {
-            // User is not logged in, redirect to login page
+         
             response.sendRedirect(request.getContextPath() + "/login");
         }
     }

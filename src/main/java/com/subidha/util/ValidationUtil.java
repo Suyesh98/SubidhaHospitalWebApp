@@ -7,7 +7,7 @@ public class ValidationUtil {
 
     
 
-    // phone number pattern 
+   
     private static final Pattern PHONE_PATTERN = Pattern.compile("^(97|98)\\d{8}$");
 
     public static boolean isNullOrEmpty(String str) {

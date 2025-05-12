@@ -1,4 +1,4 @@
-/* Import Google Font */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 * {
@@ -18,7 +18,7 @@ body {
     color: #333;
 }
 
-/*  Container & Section Styles  */
+
 .register-container {
     display: flex;
     min-height: 100vh;
@@ -46,7 +46,7 @@ body {
     background-repeat: no-repeat;
 }
 
-/* --- Form Content & Logo  --- */
+
 .form-content {
     width: 100%;
     max-width: 550px; 
@@ -58,7 +58,7 @@ body {
 
 .register-logo {
     display: block;
-    max-width: 90px; /*  smaller logo */
+    max-width: 90px; 
     height: auto;
     margin: 0 auto 20px auto;
 }
@@ -77,10 +77,10 @@ body {
     color: #555;
 }
 
-/* --- Form Grid Layout --- */
+
 .register-form .form-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+    grid-template-columns: repeat(2, 1fr); 
     gap: 15px 20px;
     margin-bottom: 20px;
 }
@@ -94,7 +94,7 @@ body {
     grid-column: 1 / -1; 
 }
 
-/* --- Form Element Styling  --- */
+
 .register-form label {
     display: block;
     font-size: 0.85rem;
@@ -122,7 +122,7 @@ body {
     appearance: none;
 }
 
-/* Add custom arrow for select */
+
 .register-form select {
     background-image: url('data:image/svg+xml;utf8,<svg fill="%23495057" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
     background-repeat: no-repeat;
@@ -131,7 +131,7 @@ body {
     padding-right: 35px; 
 }
 
-/* Style date input placeholder text  */
+
 .register-form input[type="date"]:invalid,
 .register-form input[type="date"]::-webkit-datetime-edit {
      color: #aaa;
@@ -139,18 +139,18 @@ body {
 
 
 .register-form input::placeholder,
-.register-form select option[value=""] { /* Style placeholder option */
+.register-form select option[value=""] { 
     color: #aaa;
 }
 .register-form select {
-    color: #495057; /* Default text color */
+    color: #495057; 
 }
-.register-form select:required:invalid { /* Style when placeholder is selected */
+.register-form select:required:invalid { 
      color: #aaa;
 }
 
 
-/* Input focus state ( */
+
 .register-form input:focus,
 .register-form select:focus {
     border-color: #5c4b99;
@@ -158,7 +158,7 @@ body {
     box-shadow: 0 0 0 0.2rem rgba(92, 75, 153, 0.2);
 }
 
-/* Button Styling  */
+
 .register-button {
     width: 100%;
     padding: 12px 20px;
@@ -183,7 +183,7 @@ body {
     transform: scale(0.98);
 }
 
-/* --- Links below button --- */
+
 .register-links {
     margin-top: 25px;
     text-align: center;
@@ -206,7 +206,7 @@ body {
     text-decoration: underline;
 }
 
-/* --- Footer Text ( --- */
+
 .footer-text {
     position: absolute;
     bottom: 20px;
@@ -218,7 +218,7 @@ body {
 }
 
 
-/* --- Message Styling  --- */
+
 .message {
     padding: 12px 15px;
     border-radius: 6px;
@@ -289,13 +289,13 @@ body {
         padding-bottom: 20px;
     }
 
-    /* Stack grid items on smaller screens */
+    
     .register-form .form-grid {
-        grid-template-columns: 1fr; /* Single column */
+        grid-template-columns: 1fr; 
         gap: 15px 0;
     }
      .register-form .input-group.full-width {
-        grid-column: 1 / -1; /* Still applies correctly */
+        grid-column: 1 / -1; 
     }
 }
 

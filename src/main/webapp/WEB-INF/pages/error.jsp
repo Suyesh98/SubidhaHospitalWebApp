@@ -14,7 +14,7 @@
              errorMessage = "An unexpected application issue occurred.";
            
         } else {
-             errorMessage = "An unexpected error occurred. Please try again later.";
+             errorMessage = "Page you are trying to access does not exist.";
         }
     }
     pageContext.setAttribute("displayErrorMessage", errorMessage); // Set for JSTL access
@@ -37,8 +37,8 @@
 <body>
 
     <jsp:include page="/WEB-INF/pages/navigation.jsp">
-     <%-- No specific active page needed, or pass 'home' if you want Home highlighted --%>
-     <jsp:param name="activePage" value="home"/>
+    
+     <jsp:param name="activePage" value="error"/>
 </jsp:include>
 
     <%-- Main Error Content  --%>

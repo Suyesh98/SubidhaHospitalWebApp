@@ -1,16 +1,15 @@
-/*error page*/
 
 :root {
-    --primary-color: #5c4b99; /* Logo Purple */
-    --primary-dark: #4a3a80;  /* Darker Purple */
-    --light-purple-bg: #eaddff; /* Light purple for hero/bg */
+    --primary-color: #5c4b99; 
+    --primary-dark: #4a3a80;  
+    --light-purple-bg: #eaddff; 
     --white-color: #ffffff;
     --dark-text: #2c3e50;
     --medium-text: #555;
     --light-text: #777;
     --border-color: #e0e0e0;
     --card-bg: #ffffff;
-    --body-bg: #f8f9fa; /* Very light grey background */
+    --body-bg: #f8f9fa; 
     --navbar-height: 70px;
     --footer-height: 60px;
 }
@@ -50,7 +49,7 @@ body {
 
 .error-icon {
     font-size: 50px;
-    color: #e74c3c; /* Red color for error */
+    color: #e74c3c; 
     margin-bottom: 20px;
 }
 

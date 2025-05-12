@@ -1,4 +1,4 @@
-/* Import Google Font */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 * {
@@ -148,12 +148,12 @@ body {
 
 .login-links a {
     display: block;
-    margin: 10px 0; /* Vertical spacing */
+    margin: 10px 0; 
 }
 
 
 .login-links a:hover {
-    color: #4a3a80; /* Darker purple on hover */
+    color: #4a3a80; 
     text-decoration: underline;
 }
 

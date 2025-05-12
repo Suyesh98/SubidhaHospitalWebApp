@@ -1,7 +1,7 @@
-/* Import Google Font */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-/* --- Variables --- */
+
 :root {
     --primary-color: #5c4b99;
     --primary-dark: #4a3a80;
@@ -19,7 +19,7 @@
     --card-hover-shadow: 0 8px 25px rgba(92, 75, 153, 0.15);
 }
 
-/* --- Basic Reset & Body Styles --- */
+
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body {
@@ -36,7 +36,7 @@ a { text-decoration: none; color: var(--primary-color); transition: color 0.3s e
 a:hover { color: var(--primary-dark); }
 img { max-width: 100%; height: auto; display: block; }
 
-/* --- Footer --- */
+
 .footer { background-color: var(--dark-text); color: #adb5bd; padding: 20px 0; text-align: center; height: var(--footer-height); margin-top: auto; }
 .footer-container { max-width: 1140px; margin: 0 auto; padding: 0 15px; }
 .footer p { margin: 0; font-size: 0.9rem; }
@@ -67,10 +67,10 @@ img { max-width: 100%; height: auto; display: block; }
     text-align: left;
 }
 
-/* Dashboard Grid Layout */
+
 .dashboard-grid {
     display: grid;
-    /* Creates 2 columns on medium screens, 3 on larger */
+    
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px; 
 }
@@ -151,7 +151,7 @@ img { max-width: 100%; height: auto; display: block; }
     text-decoration: underline;
 }
 
-/* Specific Card Variations */
+
 .user-management-card .card-icon { color: #4caf50; background-color: #e8f5e9; } 
 .user-management-card { border-top-color: #4caf50; }
 
@@ -164,7 +164,7 @@ img { max-width: 100%; height: auto; display: block; }
 .admin-info-card { border-top-color: var(--accent-color); }
 .admin-info-card .card-icon { color: var(--accent-color); background-color: #ede7f6; }
 
-/* Admin Info Card List */
+
 .info-list {
     list-style: none;
     padding: 0;
@@ -177,7 +177,7 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .info-list strong {
     color: var(--dark-text);
-    min-width: 90px; /* Align values */
+    min-width: 90px; 
     display: inline-block;
 }
 .role-badge {
@@ -191,7 +191,7 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 
-/*  Responsive Design  */
+
 @media (max-width: 992px) {
     .dashboard-grid {
          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 

@@ -1,41 +1,35 @@
-// src/main/java/com/subidha/model/User.java
 package com.subidha.model;
-import java.util.Date;
+
+import java.sql.Timestamp; 
 
 public class User {
-    private int id;
+    private int userId; 
     private String firstName;
     private String lastName;
-    private String username;
-    private Date visitDate;
+    private String username; 
+    private String role; 
     private String gender;
     private String phoneNumber;
-    private String department;
-    private String password;
-    private String role = "user";
+    private String password; 
+    private String passwordHash; 
+    private Timestamp createdAt; 
+    private Timestamp updatedAt; 
 
-    // Constructors 
+
+    private String departmentName; 
+
+    // Constructors
     public User() {}
 
-    public User(String firstName, String lastName, String username, Date visitDate, String gender, String phoneNumber, String department, String password) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.username = username;
-        this.visitDate = visitDate;
-        this.gender = gender;
-        this.phoneNumber = phoneNumber;
-        this.department = department;
-        this.password = password;
+  
+
+    // Getters and Setters for all fields
+    public int getUserId() {
+        return userId;
     }
 
-
-    // Getters and setters for all fields
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 
     public String getFirstName() {
@@ -62,14 +56,13 @@ public class User {
         this.username = username;
     }
 
-     public Date getVisitDate() {
-        return visitDate;
+    public String getRole() {
+        return role;
     }
 
-    public void setVisitDate(Date visitDate) {
-        this.visitDate = visitDate;
+    public void setRole(String role) {
+        this.role = role;
     }
-
 
     public String getGender() {
         return gender;
@@ -87,14 +80,6 @@ public class User {
         this.phoneNumber = phoneNumber;
     }
 
-    public String getDepartment() {
-        return department;
-    }
-
-    public void setDepartment(String department) {
-        this.department = department;
-    }
-
     public String getPassword() {
         return password;
     }
@@ -103,27 +88,50 @@ public class User {
         this.password = password;
     }
 
-     public String getRole() {
-        return role;
+    public String getPasswordHash() {
+        return passwordHash;
     }
 
-    public void setRole(String role) {
-        this.role = role;
+    public void setPasswordHash(String passwordHash) {
+        this.passwordHash = passwordHash;
     }
 
+    public Timestamp getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(Timestamp createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    public Timestamp getUpdatedAt() {
+        return updatedAt;
+    }
+
+    public void setUpdatedAt(Timestamp updatedAt) {
+        this.updatedAt = updatedAt;
+    }
+
+    public String getDepartmentName() {
+        return departmentName;
+    }
+
+    public void setDepartmentName(String departmentName) {
+        this.departmentName = departmentName;
+    }
 
     @Override
     public String toString() {
         return "User{" +
-                "id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", username='" + username + '\'' +
-                ", visitDate='" + visitDate + '\'' +
-                ", gender='" + gender + '\'' +
-                ", phoneNumber='" + phoneNumber + '\'' +
-                ", department='" + department + '\'' +
-                ", role='" + role + '\'' +
-                '}';
+               "userId=" + userId +
+               ", firstName='" + firstName + '\'' +
+               ", lastName='" + lastName + '\'' +
+               ", username='" + username + '\'' +
+               ", role='" + role + '\'' +
+               ", gender='" + gender + '\'' +
+               ", phoneNumber='" + phoneNumber + '\'' +
+               ", createdAt=" + createdAt +
+               ", updatedAt=" + updatedAt +
+               '}';
     }
 }

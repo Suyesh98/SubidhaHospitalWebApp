@@ -17,6 +17,9 @@
 	</welcome-file-list>
 
 	<!-- Servlet Mappings -->
+	
+	
+	<!-- HomePage -->
 	<servlet>
 		<servlet-name>HomepageServlet</servlet-name>
 		<servlet-class>com.subidha.controller.HomepageServlet</servlet-class>
@@ -24,6 +27,36 @@
 	<servlet-mapping>
 		<servlet-name>HomepageServlet</servlet-name>
 		<url-pattern>/home</url-pattern>
+	</servlet-mapping>
+	
+	<!-- Services Page -->
+	<servlet>
+		<servlet-name> ServicesServlet</servlet-name>
+		<servlet-class>com.subidha.controller.ServicesServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ServicesServlet</servlet-name>
+		<url-pattern>/services</url-pattern>
+	</servlet-mapping>
+	
+	<!-- About us Page -->
+	<servlet>
+		<servlet-name> AboutUsServlet</servlet-name>
+		<servlet-class>com.subidha.controller.AboutUsServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AboutUsServlet</servlet-name>
+		<url-pattern>/about_us</url-pattern>
+	</servlet-mapping>
+	
+	<!-- Contact us Page -->
+	<servlet>
+		<servlet-name> ContactUsServlet</servlet-name>
+		<servlet-class>com.subidha.controller.ContactUsServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ContactUsServlet</servlet-name>
+		<url-pattern>/contact_us</url-pattern>
 	</servlet-mapping>
 
 	<!-- Login -->
@@ -88,6 +121,12 @@
 		<servlet-name>ErrorServlet</servlet-name>
 		<url-pattern>/error</url-pattern>
 	</servlet-mapping>
+	
+	
+	<error-page>
+    <error-code>404</error-code>
+    <location>/error</location> 
+</error-page>
 
 
 	<!-- Booking page -->
@@ -100,7 +139,58 @@
 		<servlet-name>BookingServlet</servlet-name>
 		<url-pattern>/booking</url-pattern>
 	</servlet-mapping>
+	
+	
+	<!--  User management --> 
+    <servlet>
+        <servlet-name>UserManagementServlet</servlet-name>
+        <servlet-class>com.subidha.controller.UserManagementServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UserManagementServlet</servlet-name>
+        <url-pattern>/userManagement</url-pattern> 
+    </servlet-mapping>
+    
+    
+    <!--  User management --> 
+    <servlet>
+        <servlet-name>VisitManagementServlet</servlet-name>
+        <servlet-class>com.subidha.controller.VisitManagementServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>VisitManagementServlet</servlet-name>
+        <url-pattern>/visitManagement</url-pattern> 
+    </servlet-mapping>
+    
+    <!-- Department Management -->
+    <servlet>
+        <servlet-name>DepartmentManagementServlet</servlet-name>
+        <servlet-class>com.subidha.controller.DepartmentManagementServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DepartmentManagementServlet</servlet-name>
+        <url-pattern>/departmentManagement</url-pattern> 
+    </servlet-mapping>
+    
+     <!-- Doctor servlet -->
+     <servlet>
+        <servlet-name>DoctorServlet</servlet-name>
+        <servlet-class>com.subidha.controller.DoctorServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DoctorServlet</servlet-name>
+        <url-pattern>/doctor</url-pattern>
+    </servlet-mapping>
 
+ <!-- Visit servlet -->
+     <servlet>
+        <servlet-name>VisitServlet</servlet-name>
+        <servlet-class>com.subidha.controller.VisitServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>VisitServlet</servlet-name>
+        <url-pattern>/doctorVisits</url-pattern>
+    </servlet-mapping>
 	<!-- Session Configuration -->
 	<session-config>
 		<session-timeout>30</session-timeout> <!-- Session timeout in minutes -->

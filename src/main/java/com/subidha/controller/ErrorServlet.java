@@ -14,7 +14,7 @@ public class ErrorServlet extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	    // forward the request to the login JSP page to display the form
+	    
 	    RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/pages/error.jsp");
 	    dispatcher.forward(request, response);
 	}

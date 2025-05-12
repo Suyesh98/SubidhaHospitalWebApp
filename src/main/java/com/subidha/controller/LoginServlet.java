@@ -22,7 +22,7 @@ public class LoginServlet extends HttpServlet {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
 
-        // Validate input
+      
         if (username == null || username.isEmpty() || password == null || password.isEmpty()) {
             request.setAttribute("errorMessage", "Username and password are required.");
             request.getRequestDispatcher("/WEB-INF/pages/login.jsp").forward(request, response);
@@ -34,16 +34,22 @@ public class LoginServlet extends HttpServlet {
         System.out.println("user: " + user);
         System.out.println("checking if user is null.....");
         if (user != null) {
-            // Login successful
+            
             HttpSession session = request.getSession();
             System.out.println("role of user: " + user.getRole());
-            session.setAttribute("user", user);  // Store the user object in the session
+            session.setAttribute("user", user);  
             if(user.getRole().equalsIgnoreCase("admin")) {
-            	 // Redirect to the adminpage
+            	
                 response.sendRedirect(request.getContextPath() + "/admin"); 
                 return;
-            }else {
-            	 // Redirect to the homepage
+            }
+            else if(user.getRole().equalsIgnoreCase("doctor")) {
+            	 
+                response.sendRedirect(request.getContextPath() + "/doctor"); 
+                return;
+            }
+            else {
+            
                 response.sendRedirect(request.getContextPath() + "/home"); 
                 return;
             }
@@ -51,7 +57,7 @@ public class LoginServlet extends HttpServlet {
            
         } else {
         	 
-            // Login failed
+           
             request.setAttribute("errorMessage", "Invalid username or password.");
             request.getRequestDispatcher("/WEB-INF/pages/login.jsp").forward(request, response);
         }
@@ -60,7 +66,7 @@ public class LoginServlet extends HttpServlet {
 	
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	    // forward the request to the login JSP page to display the form
+	 
 	    RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/pages/login.jsp");
 	    dispatcher.forward(request, response);
 	}

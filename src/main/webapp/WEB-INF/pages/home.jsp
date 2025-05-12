@@ -53,65 +53,65 @@
 				<p class="section-subtitle">Subidha Polyclinic provides
 					top-notch care across various health specialties to ensure your
 					well-being.</p>
-				<div class="service-cards-grid">
-					<div class="service-card">
-						<div class="service-icon-wrapper">
-							<i class="fas fa-calendar-check service-icon"></i>
-						</div>
-						<h3>Appointment Management</h3>
-						<p>Easy and efficient scheduling for your visits.</p>
-					</div>
-					<div class="service-card">
-						<div class="service-icon-wrapper">
-							<i class="fas fa-procedures service-icon"></i>
-						</div>
-						<h3>Patient Management</h3>
-						<p>Personalized care and record keeping.</p>
-					</div>
-					<div class="service-card">
-						<div class="service-icon-wrapper">
-							<i class="fas fa-user-md service-icon"></i>
-						</div>
-						<h3>Staff Management</h3>
-						<p>Organized coordination of our medical team.</p>
-					</div>
-					<div class="service-card">
-						<div class="service-icon-wrapper">
-							<i class="fas fa-truck-loading service-icon"></i>
-						</div>
-						<h3>Supply Management</h3>
-						<p>Ensuring availability of necessary resources.</p>
-					</div>
-					<div class="service-card">
-						<div class="service-icon-wrapper">
-							<i class="fas fa-file-invoice-dollar service-icon"></i>
-						</div>
-						<h3>Financial Management</h3>
-						<p>Transparent billing and financial processes.</p>
-					</div>
-					<div class="service-card">
-						<div class="service-icon-wrapper">
-							<i class="fas fa-notes-medical service-icon"></i>
-						</div>
-						<h3>Report Management</h3>
-						<p>Secure access and management of medical reports.</p>
-					</div>
-					<div class="service-card">
-						<div class="service-icon-wrapper">
-							<i class="fas fa-prescription-bottle-alt service-icon"></i>
-						</div>
-						<h3>Pharmacy & Lab</h3>
-						<p>Integrated pharmacy and laboratory services.</p>
-					</div>
-					<div class="service-card">
-						<div class="service-icon-wrapper">
-							<i class="fas fa-hands-helping service-icon"></i>
-						</div>
-						<h3>Support Management</h3>
-						<p>Dedicated support for your queries and needs.</p>
-					</div>
-				</div>
-			</div>
+			    <div class="service-cards-grid">
+                    <div class="service-card">
+                        <div class="service-icon-wrapper">
+                            <i class="fas fa-stethoscope service-icon"></i>
+                        </div>
+                        <h3>General Consultation</h3>
+                        <p>Comprehensive health assessments and personalized advice.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon-wrapper">
+                            <i class="fas fa-heartbeat service-icon"></i>
+                        </div>
+                        <h3>Cardiology</h3>
+                        <p>Expert cardiac care and diagnostic services.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon-wrapper">
+                            <i class="fas fa-hospital-alt service-icon"></i>
+                        </div>
+                        <h3>Orthopedics</h3>
+                        <p>Advanced treatments for bone and joint health.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon-wrapper">
+                            <i class="fas fa-female service-icon"></i>
+                        </div>
+                        <h3>Gynecology</h3>
+                        <p>Specialized care for women's health needs.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon-wrapper">
+                            <i class="fas fa-lungs service-icon"></i>
+                        </div>
+                        <h3>Pulmonology</h3>
+                        <p>Comprehensive respiratory and lung care.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon-wrapper">
+                            <i class="fas fa-brain service-icon"></i>
+                        </div>
+                        <h3>Neurology</h3>
+                        <p>Advanced neurological diagnosis and treatment.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon-wrapper">
+                            <i class="fas fa-microscope service-icon"></i>
+                        </div>
+                        <h3>Laboratory Services</h3>
+                        <p>Accurate and timely lab testing for informed decisions.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon-wrapper">
+                            <i class="fas fa-x-ray service-icon"></i>
+                        </div>
+                        <h3>Imaging & Radiology</h3>
+                        <p>Advanced diagnostic imaging for accurate assessments.</p>
+                    </div>
+                </div>
+            </div>
 		</section>
 
 
@@ -210,7 +210,7 @@
 
 	</main>
 
-	<%-- ================== Footer ================== --%>
+	
 	<footer class="footer">
 		<div class="footer-container">
 			<p>

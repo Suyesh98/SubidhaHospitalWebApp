@@ -19,23 +19,23 @@ public class LogoutServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        HttpSession session = request.getSession(false); // Get session without creating one
+        HttpSession session = request.getSession(false); 
 
         if (session != null) {
         	User user = (User) session.getAttribute("user");
         	String username = (user != null) ? user.getUsername() : null;
             System.out.println("Logging out user: " + (username != null ? username : "Unknown"));
-            session.invalidate(); // Invalidate the session
+            session.invalidate();
         } else {
              System.out.println("Logout request received, but no active session found.");
         }
 
-        // Redirect to the login page with a logout message
+      
         response.sendRedirect(request.getContextPath() + "/login?logout=success");
     }
     
     
- // Handle POST requests the same way as GET 
+
      @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         doGet(req, resp); 

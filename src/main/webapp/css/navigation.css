@@ -1,6 +1,6 @@
 
 
-/* --- Variables (Ensure these are defined globally or define them here) --- */
+
 :root {
     --primary-color: #5c4b99;
     --primary-dark: #4a3a80;
@@ -17,7 +17,7 @@
     background-color: var(--body-bg);
 } 
 
-/* --- Navbar Container --- */
+
 .navbar {
     background-color: var(--primary-color);
     color: var(--white-color);
@@ -34,49 +34,49 @@
 }
 
 .navbar-container {
-    max-width: 1200px; /* Limit content width */
+    max-width: 1200px; 
     width: 100%;
-    margin: 0 auto; /* Center the container */
+    margin: 0 auto; 
     display: flex;
-    justify-content: space-between; /* Space out logo, nav, actions */
+    justify-content: space-between; 
     align-items: center;
     height: 100%;
-    position: relative; /* Needed for absolute positioning of mobile menu */
+    position: relative; 
 }
 
-/* --- Logo --- */
+
 .navbar-logo-link {
     display: flex;
     align-items: center;
-    text-decoration: none; /* Remove underline from logo link */
-    flex-shrink: 0; /* Prevent logo from shrinking */
+    text-decoration: none; 
+    flex-shrink: 0; 
 }
 
 .navbar-logo {
-    height: 45px; /* Adjust size as needed */
+    height: 45px; 
     width: 45px;
-    object-fit: contain; /* Scale image correctly */
+    object-fit: contain; 
     background-color: var(--white-color);
-    border-radius: 50%; /* Circular logo background */
-    padding: 4px; /* Small padding around logo */
+    border-radius: 50%; 
+    padding: 4px; 
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
-    margin-right: 10px; /* Space between logo and text/nav */
+    margin-right: 10px; 
     display: block;
 }
 
-/* Optional: Brand Text next to logo */
+
 .navbar-brand-text {
     font-size: 1.4rem;
     font-weight: 600;
     color: var(--white-color);
-    white-space: nowrap; /* Prevent text wrapping */
+    white-space: nowrap; 
 }
 
 
-/* --- Navigation Links --- */
+
 .navbar-nav {
-    display: flex; /* Display nav horizontally */
-    align-items: center; /* Align items vertically */
+    display: flex; 
+    align-items: center; 
 }
 
 .navbar-nav ul {
@@ -87,7 +87,7 @@
 }
 
 .navbar-nav li {
-    margin-left: 25px; /* Spacing between nav items */
+    margin-left: 25px; 
 }
 
 .navbar-nav a {
@@ -95,46 +95,46 @@
     font-weight: 500;
     font-size: 0.95rem;
     text-decoration: none;
-    padding: 10px 5px; /* Clickable area */
-    position: relative; /* For the underline effect */
+    padding: 10px 5px; 
+    position: relative; 
     transition: color 0.3s ease;
-    white-space: nowrap; /* Prevent wrapping */
+    white-space: nowrap; 
 }
 
-/* Underline Effect */
+
 .navbar-nav a::after {
     content: '';
     position: absolute;
-    bottom: 5px; /* Position underline */
+    bottom: 5px; 
     left: 0;
-    width: 0; /* Hidden by default */
+    width: 0; 
     height: 2px;
     background-color: var(--white-color);
     transition: width 0.3s ease;
 }
 
 .navbar-nav a:hover,
-.navbar-nav a.active { /* Style for hover and active link */
-    color: #f0f0f0; /* Slightly lighter/brighter */
+.navbar-nav a.active { 
+    color: #f0f0f0; 
 }
 
 .navbar-nav a:hover::after,
 .navbar-nav a.active::after {
-    width: 100%; /* Show underline on hover/active */
+    width: 100%; 
 }
 
 
-/* --- User Actions (Right Side) --- */
+
 .navbar-actions {
     display: flex;
     align-items: center;
-    flex-shrink: 0; /* Prevent actions from shrinking */
+    flex-shrink: 0; 
 }
 
-/* Profile Link */
+
 .navbar-profile-link {
     color: var(--white-color);
-    margin-right: 20px; /* Space before logout button */
+    margin-right: 20px; 
     display: flex;
     align-items: center;
     font-weight: 500;
@@ -144,22 +144,22 @@
 }
 
 .navbar-profile-link i {
-    font-size: 1.4rem; /* Icon size */
-    margin-right: 8px; /* Space between icon and text */
+    font-size: 1.4rem; 
+    margin-right: 8px; 
 }
 
 .navbar-profile-link:hover,
 .navbar-profile-link.active {
-    color: #f0f0f0; /* Highlight on hover/active */
+    color: #f0f0f0; 
 }
 .navbar-profile-link.active {
-    font-weight: 600; /* Make active profile link bolder */
+    font-weight: 600; 
 }
 
 
-/* Logout Button */
+
 .logout-button {
-    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+    background-color: rgba(255, 255, 255, 0.9); 
     color: var(--primary-color);
     border: none;
     padding: 8px 15px;
@@ -177,16 +177,16 @@
     font-size: 1em;
 }
 .logout-button .logout-text {
-    display: inline; /* Show text by default */
+    display: inline; 
 }
 
 
 .logout-button:hover {
-    background-color: var(--white-color); /* Solid white on hover */
+    background-color: var(--white-color); 
     color: var(--primary-dark);
 }
 
-/* Alternative Buttons for Logged Out State (Optional) */
+
 .navbar-actions .button {
     padding: 7px 14px;
     border-radius: 5px;
@@ -217,27 +217,27 @@
 }
 
 
-/* --- Mobile Menu --- */
+
 .menu-toggle-checkbox {
-    display: none; /* Hide the actual checkbox */
+    display: none; 
 }
 
 .mobile-menu-toggle {
-    display: none; /* Hidden by default on larger screens */
+    display: none; 
     background: none;
     border: none;
     color: var(--white-color);
-    font-size: 1.6rem; /* Hamburger icon size */
+    font-size: 1.6rem; 
     cursor: pointer;
     padding: 5px;
-    z-index: 1001; /* Above the nav background */
+    z-index: 1001; 
 }
 
 .mobile-menu-toggle .menu-icon-close {
-    display: none; /* Hide close icon initially */
+    display: none; 
 }
 
-/* Show/Hide icons based on checkbox state */
+
 .menu-toggle-checkbox:checked ~ .mobile-menu-toggle .menu-icon-open {
     display: none;
 }
@@ -245,9 +245,9 @@
     display: block; 
 }
 
-/* --- Responsive Styles --- */
 
-/* Medium screens and below */
+
+
 @media (max-width: 992px) {
     .navbar-nav li {
         margin-left: 15px; 
@@ -263,7 +263,7 @@
     }
 }
 
-/* Small screens (Mobile) */
+
 @media (max-width: 768px) {
     :root {
         --navbar-height: 60px; 
@@ -277,12 +277,12 @@
         padding: 3px;
     }
 
-    /* Show hamburger toggle */
+    
     .mobile-menu-toggle {
         display: block;
     }
 
-    /* Hide Nav and Actions by default */
+    
     .navbar-nav,
     .navbar-actions {
         display: none; 
@@ -298,13 +298,13 @@
         border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
 
-    /* Show Nav and Actions when checkbox is checked */
+    
     .menu-toggle-checkbox:checked ~ .navbar-nav,
     .menu-toggle-checkbox:checked ~ .navbar-actions {
-        display: flex; /* Show */
+        display: flex; 
     }
 
-    /* Style mobile menu items */
+    
     .navbar-nav ul {
         flex-direction: column;
         width: 100%;
@@ -329,7 +329,7 @@
     }
 
 
-    /* Style mobile actions */
+    
     .navbar-actions {
         padding-bottom: 20px; 
         border-top: none; 
@@ -358,7 +358,7 @@
     }
 }
 
-/* Very small screens */
+
 @media (max-width: 480px) {
      
     .logout-button .logout-text {

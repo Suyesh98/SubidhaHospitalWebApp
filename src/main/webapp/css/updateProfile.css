@@ -1,16 +1,14 @@
-/* Import Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-/* --- Variables --- */
 :root {
-    --primary-color: #5c4b99; /* Logo Purple */
-    --primary-dark: #4a3a80;  /* Darker Purple */
+    --primary-color: #5c4b99;
+    --primary-dark: #4a3a80;
     --light-purple-bg: #eaddff;
     --white-color: #ffffff;
     --dark-text: #2c3e50;
     --medium-text: #555;
     --light-text: #777;
-    --border-color: #ced4da; /* Consistent border color */
+    --border-color: #ced4da;
     --card-bg: #ffffff;
     --body-bg: #f8f9fa;
     --success-bg: #d4edda;
@@ -23,37 +21,69 @@
     --footer-height: 60px;
 }
 
-/* --- Basic Reset & Body Styles --- */
-* { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--body-bg);
     color: var(--medium-text);
     line-height: 1.6;
-    padding-top: var(--navbar-height); /* Account for fixed navbar */
+    padding-top: var(--navbar-height);
     display: flex;
     flex-direction: column;
-    min-height: 100vh; 
+    min-height: 100vh;
 }
-a { text-decoration: none; color: var(--primary-color); transition: color 0.3s ease; }
-a:hover { color: var(--primary-dark); }
-img { max-width: 100%; height: auto; display: block; }
 
-/* --- Footer --- */
-.footer { background-color: var(--dark-text); color: #adb5bd; padding: 20px 0; text-align: center; height: var(--footer-height); margin-top: auto; /* Push footer to bottom */ }
-.footer-container { max-width: 1140px; margin: 0 auto; padding: 0 15px; }
-.footer p { margin: 0; font-size: 0.9rem; }
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
 
+a:hover {
+    color: var(--primary-dark);
+}
 
-/* == Update Profile Page Specific Styles  == */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.footer {
+    background-color: var(--dark-text);
+    color: #adb5bd;
+    padding: 20px 0;
+    text-align: center;
+    height: var(--footer-height);
+    margin-top: auto;
+}
+
+.footer-container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
 
 .update-profile-main {
     flex-grow: 1;
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    padding: 40px 20px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
 }
 
 .update-profile-container {
@@ -67,9 +97,9 @@ img { max-width: 100%; height: auto; display: block; }
     padding: 35px 40px;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    max-width: 600px; /* Limit width of the card */
+    max-width: 600px;
     width: 100%;
-    text-align: left; /* Align text left within card */
+    text-align: left;
 }
 
 .card-title {
@@ -87,7 +117,6 @@ img { max-width: 100%; height: auto; display: block; }
     text-align: center;
 }
 
-/* Form Element Styling */
 .profile-form .input-group {
     margin-bottom: 20px;
 }
@@ -101,7 +130,9 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 .profile-form input[type="text"],
-.profile-form input[type="tel"] { 
+.profile-form input[type="tel"],
+.profile-form input[type="date"],
+.profile-form textarea {
     width: 100%;
     padding: 12px 15px;
     border: 1px solid var(--border-color);
@@ -111,24 +142,31 @@ img { max-width: 100%; height: auto; display: block; }
     font-size: 0.95rem;
     font-family: inherit;
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    line-height: 1.5;
 }
 
-.profile-form input::placeholder {
+.profile-form textarea {
+    resize: none;
+    min-height: 80px;
+}
+
+.profile-form input::placeholder,
+.profile-form textarea::placeholder {
     color: #aaa;
 }
 
-.profile-form input:focus {
+.profile-form input:focus,
+.profile-form textarea:focus {
     border-color: var(--primary-color);
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgba(92, 75, 153, 0.2);
 }
 
-/*  Button Styling */
 .update-button {
-    display: block; 
+    display: block;
     width: 100%;
     padding: 12px 20px;
-    margin-top: 15px; 
+    margin-top: 15px;
     background-color: var(--primary-color);
     color: white;
     border: none;
@@ -149,21 +187,21 @@ img { max-width: 100%; height: auto; display: block; }
     transform: scale(0.98);
 }
 
-/* Message Styling */
 .message {
     padding: 12px 15px;
     border-radius: 6px;
-    margin-bottom: 25px; 
+    margin-bottom: 25px;
     font-weight: 500;
     font-size: 0.9rem;
     text-align: left;
     border: 1px solid transparent;
-    display: flex; /* Align icon and text */
+    display: flex;
     align-items: center;
 }
+
 .message i {
-    margin-right: 10px; /* Space after icon */
-    font-size: 1.1em; /* Slightly larger icon */
+    margin-right: 10px;
+    font-size: 1.1em;
 }
 
 .success-message {
@@ -178,7 +216,6 @@ img { max-width: 100%; height: auto; display: block; }
     border-color: var(--error-border);
 }
 
-/* Links below form */
 .form-links {
     margin-top: 30px;
     text-align: center;
@@ -187,9 +224,10 @@ img { max-width: 100%; height: auto; display: block; }
 .back-link {
     color: var(--medium-text);
     font-size: 0.9rem;
-    display: inline-flex; /* Align icon and text */
+    display: inline-flex;
     align-items: center;
 }
+
 .back-link i {
     margin-right: 5px;
 }
@@ -199,30 +237,39 @@ img { max-width: 100%; height: auto; display: block; }
     text-decoration: underline;
 }
 
-
-/*  Responsive Design  */
-
 @media (max-width: 768px) {
-    body { padding-top: 60px; }
-
-   
+    body {
+        padding-top: 60px;
+    }
     .update-profile-main {
-        padding: 20px 15px; 
-        align-items: flex-start; 
+        padding: 20px 15px;
+        align-items: flex-start;
     }
     .profile-card {
         padding: 25px 20px;
-        margin-top: 10px; 
+        margin-top: 10px;
     }
-    .card-title { font-size: 1.6rem; }
-    .card-subtitle { font-size: 0.95rem; margin-bottom: 25px;}
+    .card-title {
+        font-size: 1.6rem;
+    }
+    .card-subtitle {
+        font-size: 0.95rem;
+        margin-bottom: 25px;
+    }
 }
 
 @media (max-width: 576px) {
-     .profile-card {
+    .profile-card {
         padding: 20px 15px;
     }
-    .card-title { font-size: 1.4rem; }
-    .card-subtitle { font-size: 0.9rem; }
-    .update-button { font-size: 0.95rem; padding: 11px 15px;}
+    .card-title {
+        font-size: 1.4rem;
+    }
+    .card-subtitle {
+        font-size: 0.9rem;
+    }
+    .update-button {
+        font-size: 0.95rem;
+        padding: 11px 15px;
+    }
 }

@@ -1,23 +1,23 @@
-/* Import Google Font */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-/* --- Variables (Optional but recommended) --- */
+
 :root {
-    --primary-color: #5c4b99; /* Logo Purple */
-    --primary-dark: #4a3a80;  /* Darker Purple */
-    --light-purple-bg: #eaddff; /* Light purple for hero/bg */
+    --primary-color: #5c4b99; 
+    --primary-dark: #4a3a80;  
+    --light-purple-bg: #eaddff; 
     --white-color: #ffffff;
     --dark-text: #2c3e50;
     --medium-text: #555;
     --light-text: #777;
     --border-color: #e0e0e0;
     --card-bg: #ffffff;
-    --body-bg: #f8f9fa; /* Very light grey background */
+    --body-bg: #f8f9fa; 
     --navbar-height: 70px;
     --footer-height: 60px;
 }
 
-/* --- Basic Reset & Body Styles --- */
+
 * {
     margin: 0;
     padding: 0;
@@ -25,7 +25,7 @@
 }
 
 html {
-    scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+    scroll-behavior: smooth; 
 }
 
 body {
@@ -33,7 +33,7 @@ body {
     background-color: var(--body-bg);
     color: var(--medium-text);
     line-height: 1.7;
-    padding-top: var(--navbar-height); /* Prevent content overlap below fixed navbar */
+    padding-top: var(--navbar-height); 
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -66,7 +66,7 @@ img {
     display: block;
 }
 
-/* --- General Container --- */
+
 .container {
     max-width: 1140px;
     margin: 0 auto;
@@ -75,14 +75,14 @@ img {
 
 
 
-/* ================== Hero Section ================== */
+
 .hero-section {
-    background-color: var(--light-purple-bg); /* Light purple background */
-    min-height: calc(100vh - var(--navbar-height)); /* Full viewport height minus navbar */
+    background-color: var(--light-purple-bg); 
+    min-height: calc(100vh - var(--navbar-height)); 
     display: flex;
     align-items: center;
     overflow: hidden;
-    position: relative; /* For potential pseudo-elements */
+    position: relative; 
 }
 
 .hero-container {
@@ -95,10 +95,10 @@ img {
 }
 
 .hero-content {
-    flex-basis: 55%; /* Adjust width of content */
+    flex-basis: 55%; 
     padding-right: 40px;
-    color: var(--dark-text); /* Text color on light bg */
-    z-index: 1; /* Ensure content is above any pseudo-elements */
+    color: var(--dark-text); 
+    z-index: 1; 
 }
 
 .hero-logo {
@@ -107,9 +107,9 @@ img {
 }
 
 .hero-content h1 {
-    font-size: 3.5rem; /* Larger hero heading */
+    font-size: 3.5rem; 
     font-weight: 700;
-    color: var(--primary-dark); /* Darker purple heading */
+    color: var(--primary-dark); 
     margin-bottom: 15px;
 }
 
@@ -120,7 +120,7 @@ img {
     margin-bottom: 30px;
 }
 .cta-button {
-    display: inline-block; /* Behave like a button */
+    display: inline-block; 
     background-color: var(--primary-color);
     color: var(--white-color);
     padding: 14px 30px;
@@ -132,7 +132,7 @@ img {
     transition: background-color 0.3s ease, transform 0.1s ease, color 0.3s ease;
     text-transform: uppercase;
     letter-spacing: 1px;
-    text-decoration: none; /* Remove underline from link */
+    text-decoration: none; 
 }
 .cta-button:hover {
     background-color: var(--primary-dark);
@@ -152,7 +152,7 @@ img {
 
 
 
-/* Doctors Section  */
+
 .doctors-section {
     padding: 60px 0;
     background-color: var(--white-color); 
@@ -218,7 +218,7 @@ img {
     line-height: 1.6;
 }
 
-/*  our services and contact Sections  */
+
 
 .services-section {
     padding: 70px 0;
@@ -438,7 +438,7 @@ img {
 
 
 
-/* Footer  */
+
 .footer {
     background-color: var(--dark-text);
     color: #adb5bd; 
@@ -459,7 +459,7 @@ img {
 }
 
 
-/*  Responsive Design  */
+
 
 @media (max-width: 992px) {
     h1 { font-size: 2.5rem; }
@@ -496,7 +496,7 @@ img {
     .hero-content .tagline { font-size: 1rem; }
     .cta-button { font-size: 1rem; padding: 12px 25px; }
 
-    .doctor-cards { grid-template-columns: 1fr; } /* Stack doctor cards */
+    .doctor-cards { grid-template-columns: 1fr; } 
 
 }
 
